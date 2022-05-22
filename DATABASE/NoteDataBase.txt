@@ -1,0 +1,40 @@
+- Sản Phẩm: Mã sản phẩm ,Tên, Giá, Số lượng sản phẩm, Loại sản phẩm, Ảnh, đã bán, Mô tả, người bán, nơi bán, Màu sắc, Size, Xuất xứ, chất liệu, Rate( 5 sao), các bình luận, anh1, anh2, anh3, anh4, anh5
+
+- Loại sản phẩm: Mã loại sản phẩm, Tên loại sản phẩm
+
+- Bình luận: Mã người dùng, Mã sản phẩm
+	Ảnh bình luận: mã ảnh
+	Video bình luận: mã video
+
+- Người dùng: Mã người dùng, Tên người dùng, email, sđt, giới tính, ngày sinh, địa chỉ, trạng thái, tên shop: Tên người dùng
+
+- Hóa đơn: mã hóa đơn, ngày lập hóa đơn, tổng giá
+
+- Chi tiết hóa đơn: mã hóa đơn, mã sản phẩm, số lượng mua, nơi bán, nơi nhận, phí vận chuyển
+
+- Khuyến mãi: Mã người dùng, mã sản phẩm, số lượng giảm
+
+
+- Giỏ hàng: Mã người dùng, Chi tiết giỏ hàng, tổng giá
+
+- Chi tiết giỏ hàng: Mã sản phẩm, số lượng mua
+
+- Thông báo: Mã thông báo, nội dung, Mã người dùng
+
+
+
+Cách tính phí vận chuyển
+Bắc - Trung - Nam
+
+
+Nội thành: 10000
+Bắc - Trung, Trung - Nam: 20000 
+Bắc - Nam:30000 
+
+
+
+Loại sản phẩm - sản phẩm : Sang
+Hóa đơn - chi tiết hóa đơn: Trung
+giỏ hàng - chi tiết giỏ hàng: Nhựt
+Khuyến mãi - bình luận: Nam
+người dùng - thông báo: Nguyên

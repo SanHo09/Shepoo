@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Bai 5</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div ng-app="myApp" >
+        <div ng-controller="myCtrl" class="container">
+            <div class="card">
+                <div class="card-header">
+                    DANH SÁCH HÀNG HÓA
+                </div>
+                    <table class="table table-bordered">
+                        <thead >
+                            <tr>
+                                <th><a href="#" ng-click="sortBy('name')">SẢN PHẨM</a></th>
+                                <th><a href="#" ng-click="sortBy('price')">ĐƠN GIÁ</a></th>
+                                <th><a href="#" ng-click="sortBy('discount')">GIẢM GIÁ</a></th>
+                                <th><a href="#" ng-click="sortBy('date')">NGÀY</a></th>
+                            </tr>
+                        </thead>
+                        <tr ng-repeat="i in products|orderBy:prop|limitTo:8:begin">
+                            <td>{{i.name|uppercase}}</td>
+                            
+                        </tr>
+                    </table>
+                </div>
+                <nav aria-label="Page navigation example" style="margin-top: 20px;">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item"><a class="page-link" href="#" ng-click="first()">First</a></li>
+                      <li class="page-item"><a class="page-link" href="#" ng-click="prev()">Previous</a></li>
+                      <li class="page-item"><a class="page-link" href="#" ng-click="next()">Next</a></li>
+                      <li class="page-item"><a class="page-link" href="#" ng-click="last()">Last</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+       var app = angular.module("myApp", []);
+       app.controller("myCtrl", function($scope, $http) {
+            $scope.products = [];
+            $http.get("products.js").then(function (respone) {
+                $scope.products = respone.data;
+            });
+
+            console.log($scope.products.length)
+            $scope.prop = "name";
+            $scope.begin = 0;
+            $scope.pageCount =  Math.ceil($scope.products.length/8);
+
+            $scope.first = function() {
+                $scope.begin = 0;
+            }
+
+            $scope.prev = function() {
+                
+                 $scope.begin-=8;
+                
+            }
+
+            $scope.next = function() {
+                $scope.begin+=8;
+            } 
+
+            $scope.last = function() {
+                $scope.begin = ($scope.pageCount - 1)*8;
+            }
+
+            $scope.sortBy = function(prop) {
+                $scope.prop = prop;
+            }
+       });
+       app.filter("percentage", function($filter) {
+            return function(input, decimals) {
+                return $filter("number")(input * 100, decimals) + "%";
+            }
+       });
+    </script>
+</body>
+</html>

@@ -40,16 +40,17 @@ GO
 create table Nguoidung (
 	MaND INT IDENTITY(1,1) primary key,
 	UserName nvarchar(50) NOT NULL,
-	ND nvarchar(50) NOT NULL,
-	EmPassword nvarchar(50) NOT NULL,
-	Tenail nvarchar(50) NOT NULL,
+	TenNguoiDung nvarchar(50) NOT NULL,
+	Email nvarchar(50),
+	Password nvarchar(50) NOT NULL,
 	SDT varchar(20) NOT NULL,
 	Gioitinh bit NOT NULL,
 	Ngaysinh date NOT NULL,
 	Diachi nvarchar(200) NOT NULL,
 	Active bit default(1),
 	Vaitro bit default(0),
-	Tenshop nvarchar(50) null 
+	Tenshop nvarchar(50) null,
+	image nvarchar(50)
 )
 GO
 create table Thongbao(

@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Indie+Flower&family=Open+Sans:wght@600&family=Pangolin&family=Poppins:ital@0;1&display=swap');
+html, body {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0 !important; 
+}
+
+.navbar-top {
+    background-color: white !important;
+}
+
+#nav-brand {
+    color: #f94e30 !important;
+}
+
+#nav-brand svg {
+    margin-left: 25px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.avatar {
+    width: 160px;
+    position: absolute;
+    right: 120px;
+    height: 35px;
+    background-color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    line-height: 30px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.avatar img {
+    
+}
+
+.avatar:hover {
+    background-color: rgb(216, 216, 216);
+}
+
+#menuOption {
+    left: -30px !important;
+}

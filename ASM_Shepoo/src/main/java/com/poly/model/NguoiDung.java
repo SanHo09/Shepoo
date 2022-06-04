@@ -8,23 +8,27 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="nguoidung")
 public class NguoiDung {
 	@Id
 	int maND;
-	String username;
+	String userName;
 	String sdt;
 	String password;
-	boolean gioitinh;
-	Date ngaysinh;
-	String diachi;
-	boolean vaitro;
-	String tenshop;
-	String tennguoidung;
+	boolean gioiTinh;
+	Date ngaySinh;
+	String diaChi;
+	boolean vaiTro;
+	String tenShop;
+	String tenNguoiDung;
 	String email;
 	String image;
 	@OneToMany(mappedBy = "nguoidung")

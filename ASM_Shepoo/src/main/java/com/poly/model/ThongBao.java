@@ -19,7 +19,6 @@ public class ThongBao {
 	@Id
 	int maTB;
 	String noiDung;
-	int maND;
 	@ManyToOne@JoinColumn(name = "maND")
 	NguoiDung nguoidung;
 

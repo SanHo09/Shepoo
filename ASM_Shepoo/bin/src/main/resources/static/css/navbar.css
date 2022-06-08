@@ -1,0 +1,35 @@
+#shopeeNav {
+    background-color: #f94e30 !important;
+    height: 50px;;
+}
+
+.shopeeNavTop {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#shopeeNav a {
+    color: white !important;
+}
+
+#shopeeNavCenter {
+    background-color: white !important;
+    height: 85px;
+}
+
+#shopeeNavCenter a {
+    color: white !important;
+}
+#shopeeNavCenter .tbn {
+    outline: white;
+}
+
+#shopeeNavBottom {
+    background-color: #f94e30 !important;
+    height: 35px;
+}
+
+#shopeeNavBottom a {
+    color: white;
+    font-size: 14px;
+}

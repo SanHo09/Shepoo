@@ -1,0 +1,122 @@
+body {
+    font-family: sans-serif;
+}
+
+.content .logo {
+    margin-top: 100px;
+}
+
+.content h1 {
+    font-weight: 400;
+    color: white;
+    font-family: Helvetica Neue,Helvetica,Arial,文泉驛正黑,WenQuanYi Zen Hei,Hiragino Sans GB,儷黑 Pro,LiHei Pro,Heiti TC,微軟正黑體,Microsoft JhengHei UI,Microsoft JhengHei,sans-serif;
+}
+
+.content p {
+    font-size: 25px;
+    color: white;
+    font-weight: 400;
+}
+
+.login-form {
+    height: 500px;
+    width: 400px;
+    margin-top: 100px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px #AAA;
+}
+
+.input-place{
+    padding-top: 10px;
+}
+
+.input-place .inputGroup {
+    padding-top: 20px;
+}
+
+.input-place .inputGroup .error{
+    color: red;
+}
+
+.input-place  .sign-in{
+    background-color: #f94e30 !important;
+    outline: none;
+    border: none;
+    color: white;
+    line-height: 15px;
+    font-size: 18px;
+    height: 35px !important;
+}
+
+.input-place  .sign-in:hover {
+    background-color: #f77a64 !important;
+}
+
+.input-place .forgot-password a{
+    color: #0d6efd !important;
+    font-size: small;
+    cursor: pointer;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #AAA;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #AAA;
+  }
+  
+  .separator:not(:empty)::before {
+    margin-right: .25em;
+  }
+  
+  .separator:not(:empty)::after {
+    margin-left: .25em;
+  }
+
+.button-link button{
+    margin-right: 13px;
+    color: black;
+}
+
+.button-link button:hover{
+    background-color: rgb(241, 241, 241) !important;
+    color: black;
+}
+
+.help {
+    font-size: 15px;
+    font-weight: 200;
+    color: #ee4d2d;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.signUp {
+    margin-top: 20px;
+}
+
+.signUp span{
+    color:#AAA;
+}
+
+.signUp span a{
+    color: #ee4d2d !important;
+    cursor: pointer;
+}
+
+.policy {
+    font-size: 14px !important;
+}
+
+.policy a{
+    color: #ee4d2d !important;
+}

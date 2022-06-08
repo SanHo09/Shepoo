@@ -6,7 +6,8 @@
 	Ảnh bình luận: mã ảnh
 	Video bình luận: mã video
 
-- Người dùng: Mã người dùng, Tên người dùng, email, sđt, giới tính, ngày sinh, địa chỉ, trạng thái, tên shop: Tên người dùng
+- Người dùng: Mã người dùng, Tên người dùng, email, sđt, giới tính, ngày sinh, 
+địa chỉ, trạng thái, tên shop: Tên người dùng
 
 - Hóa đơn: mã hóa đơn, ngày lập hóa đơn, tổng giá
 

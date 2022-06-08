@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Indie+Flower&family=Open+Sans:wght@600&family=Pangolin&family=Poppins:ital@0;1&display=swap');
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0 !important; 
+}
+
+svg {
+    margin-bottom: 3px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+.carousel-item {
+    height:250px;
+}
+
+.topCategory .card {
+    border: none;
+    margin-left: 13px;
+}
+
+.topCategory .card img {
+    border: 1px solid #bebcbc;
+    border-radius: 20px;
+}
+
+#topCategory {
+    margin-top: 30px;
+}
+
+.card a {
+    color: black;
+}
+.topCategory a {
+    color: black;
+    font-size: .8125rem;
+}
+
+.category-title {
+    font-size: 25px;
+    color: #a39f9f;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.category card {
+    font-size: 14px;
+}
+
+.category a {
+    cursor: pointer;
+}
+
+.product {
+    padding: 5px;
+}
+
+.product:hover {
+    border: 1px solid #f94e30;
+    padding: 0px 1px 0px 1px;
+}
+
+.product .card-body .card-text {
+    font-size: 14px;
+}
+
+.product .card-body .price {
+    font-size: 16px; 
+    color: red; 
+    font-weight: 500;
+}
+
+.product .card-body .number {
+    margin-left: 20px;
+    font-size: small; 
+    color: rgb(155, 154, 152);
+}
+
+/*style cart navbar here  */
+#shopeeNavCenter a{
+    font-weight: 500;
+    color: #f94e30 !important;
+    margin: 75px;
+}
+
+.input-group {
+    width: 100% !important;
+}
+.input-group #findMoreProduct {
+    border: 2px solid #f94e30 !important; 
+    
+}
+
+#cartBottom {
+   
+    position: sticky;
+    bottom: 0px;
+    background-color: white !important;
+}
+
+#cartBottom tr  {
+    height: 60px;
+}
+
+.shepooVoucher {
+    color: black;
+    font-size: 18px;
+    margin-left: 70%;
+    line-height: 90px;
+}
+
+.selectVoucher {
+    margin-left: 25px;
+}
+
+.pay {
+    margin-left: 50%;
+}
+#btnPay {
+    border-radius: 2px;
+    border: none;
+    background-color: #f94e30;
+    color: white;
+    height: 40px;
+    width: 200px;
+}

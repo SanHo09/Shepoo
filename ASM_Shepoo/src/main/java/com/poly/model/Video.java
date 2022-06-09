@@ -1,10 +1,6 @@
 package com.poly.model;
 
-<<<<<<< HEAD
 
-public class Video {
-	
-=======
 import java.io.Serializable;
 
 import javax.persistence.Entity;
@@ -32,5 +28,4 @@ public class Video implements Serializable{
 	@ManyToOne
 	@JoinColumn(name="maBL")
 	private BinhLuan binhLuan;
->>>>>>> 45f9e03e31b479d320fd87be7518582c9aaf7830
 }

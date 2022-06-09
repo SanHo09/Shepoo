@@ -1,475 +1,214 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt"%>
 <!DOCTYPE html>
 
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shepoo Wakanda| Mua và bán</title>
-    <link rel="icon" href="images/shopee.png" type="image/gif" sizes="16x16">
-    <link rel="stylesheet" href="/css/navbar.css">
-    <link rel="stylesheet" href="/css/classify.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shepoo Wakanda| Mua và bán</title>
+<link rel="icon" href="images/shopee.png" type="image/gif" sizes="16x16">
+<link rel="stylesheet" href="/css/navbar.css">
+<link rel="stylesheet" href="/css/classify.css">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
 
 <body ng-app="myApp">
-    <!--Navbar-->
-    <!--Navbar top-->
-    <div ng-controller="classifyCtrl">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light text-white" id="shopeeNav">
-            <div class="container">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse shopeeNavTop" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Kênh Người Bán | </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Tải ứng dụng |</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">
-                      kết Nối
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook"
-                        viewBox="0 0 16 16">
-                        <path
-                          d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                      </svg>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
-                        viewBox="0 0 16 16">
-                        <path
-                          d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-                <span class="navbar-text">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell"
-                          viewBox="0 0 16 16">
-                          <path
-                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
-                        </svg>
-                        Thông Báo
-                      </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                          class="bi bi-question-circle" viewBox="0 0 16 16">
-                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                          <path
-                            d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
-                        </svg>
-                        Hỗ Trợ
-                      </a>
-                    </li>
-                    
-                    <li class="nav-item" ng-if="user==''">
-                      <a class="nav-link" aria-current="page" href="#!signUp">
-                        
-                        Đăng Ký      |
-                      </a>
-                    </li>
-                    <li class="nav-item" ng-if="user==''">
-                      <a class="nav-link" aria-current="page" href="#!signIn">
-                        
-                        Đăng Nhập
-                      </a>
-                    </li>
-                    <li class="nav-item" ng-if="user!=''">
-                      <a class="nav-link" aria-current="page" >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                        </svg>
-                        {{user}}
-                      </a>
-                    </li>
-                    <li class="nav-item" ng-if="user!=''">
-                      <a class="nav-link" aria-current="page" href="#!signIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
-                          <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
-                        </svg>
-                        Đăng Xuất
-                      </a>
-                    </li>
-                  </ul>
-                </span>
-              </div>
-            </div>
-          </nav>
-          <!--navbar Center-->
-          <nav class="navbar navbar-light bg-light navbar-expand-lg" id="shopeeNavCenter" style="background-color: #f94e30 !important;">
-            <div class="container">
-              <div class="col-sm-3">
-                <a class="navbar-brand" href="#">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                    style="margin-bottom: 20px;" class="bi bi-bag-check-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                      d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
-                  </svg>
-                  <span style="font-size: 30px;">Shepoo</span>
-        
-                </a>
-              </div>
-              <div class="col-sm-6">
-                <div class=" input-group">
-                  <input type="text" class="form-control" placeholder="FREESHIP ĐẾN 0K" aria-label="Recipient's username"
-                    aria-describedby="button-addon2">
-                  <button class="btn" type="button" id="button-addon2" style="border: 1px solid white;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-search"
-                      viewBox="0 0 16 16">
-                      <path
-                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="col-sm-3">
-                <svg style="margin-left: 50px;" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
-                  class="bi bi-cart" viewBox="0 0 16 16">
-                  <path
-                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                </svg>
-              </div>
-            </div>
-          </nav>
-          <!--Navbar bottom-->
-          <nav class="nav justify-content-center" id="shopeeNavBottom">
-            <a class="nav-link" href="#!classify/shoes">Giày dép</a>
-            <a class="nav-link" href="#!classify/accessory">Máy tính</a>
-            <a class="nav-link" href="#!classify/accessory">Tai Nghe</a>
-            <a class="nav-link" href="#!classify/vehicle">Xe Yamaha</a>
-            <a class="nav-link" href="#!classify/clothes">Quần áo</a>
-            <a class="nav-link" href="#!classify/accessory">Chuột Gaming</a>
-            <a class="nav-link" href="#!classify/clothes">Mỹ phẩm</a>
-            <a class="nav-link" href="#!classify/accessory">Nước tăng lực</a>
-          </nav>
+	<!--Navbar-->
+	<!--Navbar top-->
+	
 
-        <!--Web content-->
-        <!--Banner-->
-        <div class="container-fluid banner" style=" height: 420px;">
-            <div class="container">
-                <br>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                                    class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                                    aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                                    aria-label="Slide 3"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                                    aria-label="Slide 4"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                                    aria-label="Slide 5"></button>
-                            </div>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="/images/banner/banner_classify1.png" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="/images/banner/banner_classify2.png" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="/images/banner/banner_classify3.png" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="/images/banner/banner_classify4.png" class="d-block w-100" alt="...">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="/images/banner/banner_classify5.png" class="d-block w-100" alt="...">
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
+		<%@include file="../../common/product/header.jsp" %>
+		<!--Web content-->
+		<!--Banner-->
+		<div class="container-fluid banner" style="height: 420px;">
+			<div class="container">
+				<br>
+				<div class="row">
+					<div class="col-sm-12">
+						<div id="carouselExampleIndicators" class="carousel slide"
+							data-bs-ride="carousel">
+							<div class="carousel-indicators">
+								<button type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide-to="0" class="active" aria-current="true"
+									aria-label="Slide 1"></button>
+								<button type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide-to="1" aria-label="Slide 2"></button>
+								<button type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide-to="2" aria-label="Slide 3"></button>
+								<button type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide-to="3" aria-label="Slide 4"></button>
+								<button type="button"
+									data-bs-target="#carouselExampleIndicators"
+									data-bs-slide-to="4" aria-label="Slide 5"></button>
+							</div>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="/images/banner/banner_classify1.png"
+										class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item">
+									<img src="/images/banner/banner_classify2.png"
+										class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item">
+									<img src="/images/banner/banner_classify3.png"
+										class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item">
+									<img src="/images/banner/banner_classify4.png"
+										class="d-block w-100" alt="...">
+								</div>
+								<div class="carousel-item">
+									<img src="/images/banner/banner_classify5.png"
+										class="d-block w-100" alt="...">
+								</div>
+							</div>
+							<button class="carousel-control-prev" type="button"
+								data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button"
+								data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+					</div>
 
 
 
 
-                    <br><br>
-                    <!--content-->
-                    <div class="container justify-content-center suggest" style="margin-top: 30px;">
+					<br>
+					<br>
+					<!--content-->
+					<div class="container justify-content-center suggest"
+						style="margin-top: 30px;">
 
-                        <div class="row">
-                            <div class="col-sm-3 ">
+						<div class="row">
+							<div class="col-sm-3 ">
 
-                                <ul class="category">
-                                    <li>
-                                        <strong style="font-size: 17px;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18"
-                                                fill="currentColor" class="bi bi-list-ul" viewBox="0 0 14 14">
-                                                <path fill-rule="evenodd"
-                                                    d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-                                            </svg>
-                                            Tất cả danh mục
-                                            <hr width="200px">
-
-                                        </strong>
-                                    </li>
-
-                                    <li><a ng-click="filterByType('clothes')">Thời trang</a></li>
-                                    <li><a ng-click="filterByType('shoes')">Giày dép</a></li>
-                                    <li><a ng-click="filterByType('vehicle')">Xe cộ</a></li>
-                                    <li><a ng-click="filterByType('accessory')">Phụ kiện</a></li>
-
-                                </ul>
-
-                                <ul class="category" style="margin-top: 30px;">
-                                    <li>
-                                        <strong style="font-size: 17px;">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-filter" viewBox="0 0 14 14  ">
+								<ul class="category">
+									<li><strong style="font-size: 17px;"> <svg
+												xmlns="http://www.w3.org/2000/svg" width="20" height="18"
+												fill="currentColor" class="bi bi-list-ul"
+												viewBox="0 0 14 14">
                                                 <path
-                                                    d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
-                                            </svg>
-                                            Thương Hiệu
-                                            <hr width="200px">
+													fill-rule="evenodd"
+													d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                            </svg> Tất cả danh mục
+											<hr width="200px">
 
-                                        </strong>
-                                    </li>
-                                    
-                                    <li><a ng-click="checkBrand('Yamaha')"> Yamaha </a> </li>
-                                    <li><a ng-click="checkBrand('Nike')"> Nike </a> </li>
-                                    <li><a ng-click="checkBrand('Gucci')"> Gucci </a> </li>
-                                    <li><a ng-click="checkBrand('Apple')"> Apple </a> </li>
-                                    <li>
-                                        <hr width="200px">
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <form>
-                                        Tìm Kiếm<br><br>
-                                        <input type="text" placeholder="Tên sản phẩm" style="width: 220px"  ng-model="prodName" ng-keyup="findProd()">
-                                        <br><br>
-                                        
-                                    </form>
-                                </ul>
-                                    
+									</strong></li>
 
+									<li><a ng-click="filterByType('clothes')">Thời trang</a></li>
+									<li><a ng-click="filterByType('shoes')">Giày dép</a></li>
+									<li><a ng-click="filterByType('vehicle')">Xe cộ</a></li>
+									<li><a ng-click="filterByType('accessory')">Phụ kiện</a></li>
 
-                            </div>
+								</ul>
 
+								<ul class="category" style="margin-top: 30px;">
+									<li><strong style="font-size: 17px;"> <svg
+												xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+												fill="currentColor" class="bi bi-filter"
+												viewBox="0 0 14 14  ">
+                                                <path
+													d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                                            </svg> Thương Hiệu
+											<hr width="200px">
 
-                            <!--product List-->
-                            <div class="col-sm-9">
-                                <div class="row">
-                                    <div class="alert alert-secondary text" role="alert">
-                                        Sắp xếp theo
-                                        <button class="btn btn-dark btn-outline-light" type="submit"
-                                            style=" background-color: #f94e30 !important;" ng-click="filterByType('')"> Phổ biến</button>
-                                        <button class="btn btn-light " type="submit" ng-click="setOrder('-sold')"> Bán chạy</button>
-                                        <button ng-click="setOrderPrice()" id="price" class="btn btn-light ">Giá: giảm dần</button>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="card col-sm-2 product" ng-repeat="i in productList |orderBy:order| filter: {type : typeProp, brand : brandProp, name : nameProp }">
-                                        <a href="#!detail/{{i.id}}" class="">
-                                            <img class="card-img-top" src="/images/product/{{i.img}}"
-                                                alt="Card image cap">
-                                        </a>
-                                        <div class="card-body">
-                                            <p class="card-text">{{i.name}}</p>
-                                            <span class="price">{{i.price | currency:'':3}}đ</span>
+									</strong></li>
 
-                                            <span class="number">đã bán: {{i.sold/1000}}K</span>
+									<li><a ng-click="checkBrand('Yamaha')"> Yamaha </a></li>
+									<li><a ng-click="checkBrand('Nike')"> Nike </a></li>
+									<li><a ng-click="checkBrand('Gucci')"> Gucci </a></li>
+									<li><a ng-click="checkBrand('Apple')"> Apple </a></li>
+									<li>
+										<hr width="200px">
+									</li>
+								</ul>
+								<ul>
+									<form>
+										Tìm Kiếm<br>
+										<br> <input type="text" placeholder="Tên sản phẩm"
+											style="width: 220px" ng-model="prodName"
+											ng-keyup="findProd()"> <br>
+										<br>
 
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <br>
+									</form>
+								</ul>
 
 
-                    <br>
-                    <br>
-                    <br>
-                    
-                </div>
-            </div>
-                <br>
-                <br>
-                <!-- Footer -->
-                <footer class="text-center text-lg-start bg-light text-muted">
-                    <!-- Section: Social media -->
-                    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-                        <!-- Left -->
-                        <div class="me-5 d-none d-lg-block">
-                            <h2 class="display-6">Sheepo gì cũng có, mua hết ở tiki</h2>
-                        </div>
-                        <!-- Left -->
 
-                        <!-- Right -->
-                        <div>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-google"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="" class="me-4 text-reset">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </div>
-                        <!-- Right -->
-                    </section>
-                    <!-- Section: Social media -->
+							</div>
 
-                    <!-- Section: Links  -->
-                    <section class="">
-                        <div class="container text-center text-md-start mt-5">
-                            <!-- Grid row -->
-                            <div class="row mt-3">
-                                <!-- Grid column -->
-                                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                                    <!-- Content -->
-                                    <h6 class="text-uppercase fw-bold mb-4">
-                                        <i class="fas fa-gem me-3"></i>SHEPOO
-                                    </h6>
-                                    <p>
-                                        Shepoo - ứng dụng mua sắm trực tuyến thú vị,
-                                        tin cậy, an toàn và miễn phí! Shepoo là nền tảng giao dịch trực tuyến
-                                        hàng đầu ở Wakanda. Với sự đảm bảo của Shepoo, bạn sẽ mua hàng trực tuyến an tâm
-                                        và nhanh chóng hơn bao
-                                        giờ hết!
-                                    </p>
-                                </div>
-                                <!-- Grid column -->
 
-                                <!-- Grid column -->
-                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                                    <!-- Links -->
-                                    <h6 class="text-uppercase fw-bold mb-4">
-                                        Về shepoo
-                                    </h6>
-                                    <p>
-                                        <a href="#!" class="text-reset">Giới thiệu về shepoo</a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-reset">Tuyển dụng</a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-reset">Chính sách và bảo mật</a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-reset">Kênh người bán</a>
-                                    </p>
-                                </div>
-                                <!-- Grid column -->
+							<!--product List-->
+							<div class="col-sm-9">
+								<div class="row">
+									<div class="alert alert-secondary text" role="alert">
+										Sắp xếp theo
+										<button class="btn btn-dark btn-outline-light" type="submit"
+											style="background-color: #f94e30 !important;"
+											ng-click="filterByType('')">Phổ biến</button>
+										<button class="btn btn-light " type="submit"
+											ng-click="setOrder('-sold')">Bán chạy</button>
+										<button ng-click="setOrderPrice()" id="price"
+											class="btn btn-light ">Giá: giảm dần</button>
+									</div>
+								</div>
+								<div class="row">
+									<div class="card col-sm-2 product"
+										ng-repeat="i in productList |orderBy:order| filter: {type : typeProp, brand : brandProp, name : nameProp }">
+										<a href="#!detail/{{i.id}}" class=""> <img
+											class="card-img-top" src="/images/product/{{i.img}}"
+											alt="Card image cap">
+										</a>
+										<div class="card-body">
+											<p class="card-text">{{i.name}}</p>
+											<span class="price">{{i.price | currency:'':3}}đ</span> <span
+												class="number">đã bán: {{i.sold/1000}}K</span>
 
-                                <!-- Grid column -->
-                                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                                    <!-- Links -->
-                                    <h6 class="text-uppercase fw-bold mb-4">
-                                        Thanh Toán
-                                    </h6>
-                                    <p>
-                                        <a href="#!" class="text-reset">Agribank</a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-reset">Mb Bank</a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-reset">Visa card</a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-reset">TP bank</a>
-                                    </p>
-                                </div>
-                                <!-- Grid column -->
+										</div>
+									</div>
 
-                                <!-- Grid column -->
-                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                                    <!-- Links -->
-                                    <h6 class="text-uppercase fw-bold mb-4">
-                                        Contact
-                                    </h6>
-                                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-                                            <path
-                                                d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
-                                        </svg> New York, NY 10012, US</p>
-                                    <p>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-mailbox" viewBox="0 0 16 16">
-                                            <path
-                                                d="M4 4a3 3 0 0 0-3 3v6h6V7a3 3 0 0 0-3-3zm0-1h8a4 4 0 0 1 4 4v6a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V7a4 4 0 0 1 4-4zm2.646 1A3.99 3.99 0 0 1 8 7v6h7V7a3 3 0 0 0-3-3H6.646z" />
-                                            <path
-                                                d="M11.793 8.5H9v-1h5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.354-.146l-.853-.854zM5 7c0 .552-.448 0-1 0s-1 .552-1 0a1 1 0 0 1 2 0z" />
-                                        </svg>
-                                        info@example.com
-                                    </p>
-                                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                                        </svg> + 01 234 567 88</p>
-                                    <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd"
-                                                d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
-                                        </svg> + 01 234 567 89</p>
-                                </div>
-                                <!-- Grid column -->
-                            </div>
-                            <!-- Grid row -->
-                        </div>
-                    </section>
-                    <!-- Section: Links  -->
+								</div>
+							</div>
+						</div>
+					</div>
 
-                    <!-- Copyright -->
-                    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-                        © 2022 Copyright:
-                        <a class="text-reset fw-bold" href="#">Sheepo.com</a>
-                    </div>
-                    <!-- Copyright -->
-                </footer>
-                <!-- Footer -->
-            </div>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-                crossorigin="anonymous"></script>
-            <script src="js/products.js"></script>
+					<br> <br> <br> <br>	
 
-            <script src="js/webApp.js"></script>
+				</div>
+			</div>
+			<br> <br>
+			<!-- Footer -->
+			<%@include file="../../common/product/footer.jsp" %>
+			
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"></script>
+		<script src="js/products.js"></script>
+
+		<script src="js/webApp.js"></script>
 </body>
 
 </html>

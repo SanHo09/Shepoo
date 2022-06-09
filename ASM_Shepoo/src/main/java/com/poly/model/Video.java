@@ -1,5 +1,6 @@
 package com.poly.model;
 
-public class Video {
 
+public class Video {
+	
 }

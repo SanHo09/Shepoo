@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class TestController {
+	
 	@RequestMapping("test/categories")
 	public String testCategories() {
 		return "/template/product/categories";
@@ -40,6 +41,6 @@ public class TestController {
 	
 	@RequestMapping("test/admin/dashboard")
 	public String testDashboard() {
-		return "/template/admin/dashboard";
+		return "/template/admin/dashboard/dashboard";
 	}
 }

@@ -19,7 +19,7 @@ public class ThongBao {
 	@Id
 	int maTB;
 	String noiDung;
-	@ManyToOne@JoinColumn(name = "maND")
+	@ManyToOne @JoinColumn(name = "maND")
 	NguoiDung nguoidung;
 
 }

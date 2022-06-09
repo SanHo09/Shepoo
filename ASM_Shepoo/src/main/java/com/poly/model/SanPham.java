@@ -59,6 +59,7 @@ public class SanPham {
 	private String anh5;
 	@Column(name = "Active")
 	private boolean active;
-	@ManyToOne @JoinColumn(name = "MaLSP")
+	@ManyToOne
+	@JoinColumn(name = "MaLSP")
 	private LoaiSanPham loaiSanPham;
 }

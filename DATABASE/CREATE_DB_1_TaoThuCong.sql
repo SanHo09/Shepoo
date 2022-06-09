@@ -137,3 +137,36 @@ GO
 ALTER TABLE BinhLuan ADD MaSanPham INT 
 GO
 ALTER TABLE BinhLuan ADD CONSTRAINT fk_SanPham FOREIGN KEY(MaSanPham) REFERENCES SanPham(MaSP)
+GO
+
+DROP TABLE ChiTietGioHAng
+GO
+DROP TABLE ChiTietHoaDon
+
+GO
+
+CREATE TABLE ChiTietHoaDon(
+	MaCTHD			int IDENTITY(1,1) PRIMARY KEY,
+	MaHD			int not null,
+	MaSP			int not null,
+	SoLuongMua		int not null,
+	NoiBan			nvarchar(100) not null,
+	NoiNhan			nvarchar(100) not null,
+	PhiVanChuyen	float not null,
+	foreign key (MaHD) references HoaDon(MaHD),
+	foreign key (MaSP) references SanPham(MaSP)
+)
+
+GO
+CREATE TABLE ChiTietGioHAng(
+	MaCTHD	int IDENTITY(1,1) PRIMARY KEY,
+	MaGioHang INT,
+	MaSP INT,
+	SoLuongMua INT NOT NULL,
+	FOREIGN KEY(MaGioHang) REFERENCES GioHang(MaGioHang),
+	FOREIGN KEY(MaSP) REFERENCES SanPham(MaSP)
+)
+
+GO
+
+EXEC sp_rename 'SanPham.xuatsu', 'xuatsu';

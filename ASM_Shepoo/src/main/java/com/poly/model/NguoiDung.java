@@ -23,9 +23,9 @@ public class NguoiDung {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	int maND;
 	String userName;
+	boolean gioiTinh;
 	String sdt;
 	String password;
-	boolean gioiTinh;
 	Date ngaySinh;
 	String diaChi;
 	boolean vaiTro;
@@ -33,6 +33,7 @@ public class NguoiDung {
 	String tenNguoiDung;
 	String email;
 	String image;
+	String active;
 	@OneToMany(mappedBy = "nguoidung")
 	List<ThongBao> thongbao;
 }

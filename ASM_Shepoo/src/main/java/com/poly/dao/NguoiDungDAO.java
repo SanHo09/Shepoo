@@ -16,5 +16,4 @@ public interface NguoiDungDAO  extends JpaRepository<NguoiDung, Integer> {
 	public NguoiDung deleteById(NguoiDung entity);
 	@Query("select o FROM NguoiDung o where o.active=1")
 	public Page<NguoiDung> findAllByActive(Pageable page);
-	//Sủa lại tên NguoiDung trong cậu lênh query
 }

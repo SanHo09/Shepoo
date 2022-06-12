@@ -15,13 +15,13 @@ public class ThongBaoServiceImpl implements ThongBaoService {
 	@Override
 	public Page<ThongBao> findAll(Pageable page) {
 		// TODO Auto-generated method stub
-		return findAll(page);
+		return dao.findAll(page);
 	}
 
 	@Override
 	public ThongBao findById(int id) {
 		// TODO Auto-generated method stub
-		return findById(id);
+		return dao.findByID(id);
 	}
 
 	@Override

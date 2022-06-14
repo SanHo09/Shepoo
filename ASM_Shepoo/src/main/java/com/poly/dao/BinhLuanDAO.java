@@ -13,7 +13,10 @@ public interface BinhLuanDAO extends JpaRepository<BinhLuan, Integer>{
 	List<BinhLuan> findAllByCustomer(Integer maND);
 	
 	@Query("SELECT p FROM BinhLuan p WHERE p.sanPham.maSP=?1")
-	List<BinhLuan> findAllByProduck(Integer maSP);
+	List<BinhLuan> findAllByProduct(Integer maSP);
+	
+	@Query("SELECT p FROM BinhLuan p WHERE p.nguoiDung.maND=?1 AND p.sanPham.maSP=?2")
+	List<BinhLuan> findAllByProductAndNguoiDung(Integer maSP, Integer maND);
 	
 	@Query("DELETE BinhLuan p WHERE p.maBL=?1")
 	Void DeleteByID(Integer maBL);

@@ -18,4 +18,39 @@ public class GioHangServiceImpl implements GioHangService{
 		return dao.findAll(page);
 	}
 
+	@Override
+	public GioHang findAllByNguoiDung(int maND) {
+		return null;
+	}
+
+	@Override
+	public GioHang create() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public GioHang update() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public GioHang clear() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Boolean checkExistsByUser() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

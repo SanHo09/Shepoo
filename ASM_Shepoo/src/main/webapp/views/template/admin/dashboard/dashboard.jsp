@@ -62,22 +62,20 @@
 			</div>
 			<div class="container-fluid">
 			<!-- Total stuffs -->
-				<%@include file="./total_stuff.jsp"%>
+				<%@include file="../../../common/admin/dashboard/total_stuff.jsp"%>
 				<!-- Table -->
-				<%@include file="./table.jsp"%>
+				<%@include file="../../../common/admin/dashboard/table.jsp"%>
+	
 				
 				<div class="row">
 				<!-- Comment-->
-					<%@include file="./comment.jsp"%>
+				<%@include file="../../../common/admin/dashboard/comment.jsp"%>
 					<!-- Top product -->
-					<%@include file="./top_selled.jsp"%>
+				<%@include file="../../../common/admin/dashboard/top_selled.jsp"%>
 				</div>
 			</div>
 			
-			<footer class="footer text-center">
-				2021 © Ample Admin brought to you by <a
-					href="https://www.wrappixel.com/">wrappixel.com</a>
-			</footer>
+			
 
 		</div>
 		<!-- ============================================================== -->

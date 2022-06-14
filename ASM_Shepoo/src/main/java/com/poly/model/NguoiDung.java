@@ -27,13 +27,20 @@ public class NguoiDung {
 	int maND;
 	@Column(name = "UserName")
 	String userName;
+<<<<<<< HEAD
 	@Column(name = "SDT")
+=======
+	boolean gioiTinh;
+>>>>>>> bff4895703f5771fc7ad39498234f95f1460f9d3
 	String sdt;
 	@Column(name = "password")
 	String password;
+<<<<<<< HEAD
 	@Column(name = "Gioitinh")
 	boolean gioiTinh;
 	@Column(name = "Ngaysinh")
+=======
+>>>>>>> bff4895703f5771fc7ad39498234f95f1460f9d3
 	Date ngaySinh;
 	@Column(name = "Diachi")
 	String diaChi;
@@ -47,8 +54,12 @@ public class NguoiDung {
 	String email;
 	@Column(name = "Image")
 	String image;
+<<<<<<< HEAD
 	@Column(name = "Active")
 	boolean isActive;
+=======
+	String active;
+>>>>>>> bff4895703f5771fc7ad39498234f95f1460f9d3
 	@OneToMany(mappedBy = "nguoidung")
 	List<ThongBao> thongbao;
 }

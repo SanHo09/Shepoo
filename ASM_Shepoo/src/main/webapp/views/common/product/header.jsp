@@ -11,7 +11,7 @@
 		<div class="collapse navbar-collapse shopeeNavTop" id="navbarText">
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				<li class="nav-item"><a class="nav-link" aria-current="page"
-					href="#">Kênh Người Bán | </a></li>
+					href="/product/admin">Kênh Người Bán | </a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Tải ứng
 						dụng |</a></li>
 				<li class="nav-item"><a class="nav-link" href="#"> kết Nối
@@ -49,9 +49,9 @@
 					</a></li>
 
 					<li class="nav-item" ng-if="user==''"><a class="nav-link"
-						aria-current="page" href="#!signUp"> Đăng Ký | </a></li>
+						aria-current="page" href="/user/signUp"> Đăng Ký | </a></li>
 					<li class="nav-item" ng-if="user==''"><a class="nav-link"
-						aria-current="page" href="#!signIn"> Đăng Nhập </a></li>
+						aria-current="page" href="/user/signIn"> Đăng Nhập </a></li>
 					<li class="nav-item" ng-if="user!=''"><a class="nav-link"
 						aria-current="page"> <svg xmlns="http://www.w3.org/2000/svg"
 								width="16" height="16" fill="currentColor"
@@ -118,12 +118,12 @@
 </nav>
 <!--Navbar bottom-->
 <nav class="nav justify-content-center" id="shopeeNavBottom">
-	<a class="nav-link" href="#!classify/shoes">Giày dép</a> <a
-		class="nav-link" href="#!classify/accessory">Máy tính</a> <a
-		class="nav-link" href="#!classify/accessory">Tai Nghe</a> <a
-		class="nav-link" href="#!classify/vehicle">Xe Yamaha</a> <a
-		class="nav-link" href="#!classify/clothes">Quần áo</a> <a
-		class="nav-link" href="#!classify/accessory">Chuột Gaming</a> <a
-		class="nav-link" href="#!classify/clothes">Mỹ phẩm</a> <a
-		class="nav-link" href="#!classify/accessory">Nước tăng lực</a>
+	<a class="nav-link"  href="product/classify/shoes">Giày dép</a> <a
+		class="nav-link" href="product/classify/accessory">Máy tính</a> <a
+		class="nav-link" href="product/classify/accessory">Tai Nghe</a> <a
+		class="nav-link" href="product/classify/vehicle">Xe Yamaha</a> <a
+		class="nav-link" href="product/classify/clothes">Quần áo</a> <a
+		class="nav-link" href="product/classify/accessory">Chuột Gaming</a> <a
+		class="nav-link" href="product/classify/clothes">Mỹ phẩm</a> <a
+		class="nav-link" href="product/classify/accessory">Nước tăng lực</a>
 </nav>

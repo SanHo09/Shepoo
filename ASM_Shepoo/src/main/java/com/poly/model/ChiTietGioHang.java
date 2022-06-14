@@ -26,13 +26,13 @@ import lombok.NoArgsConstructor;
 public class ChiTietGioHang implements Serializable{
 	
 	@Id
-	int maCTHD;
+	int maCTGH;
 	
 	@ManyToOne @JoinColumn(name = "maGioHang")
 	GioHang gioHang;
 	
 	@OneToMany(mappedBy = "maSP")
-	List<SanPham> sanPhams;
+	List<SanPham> sanPham;
 	
 	int soLuongMua;
 

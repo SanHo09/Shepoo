@@ -26,5 +26,5 @@ public class Anh implements Serializable{
 	
 	@ManyToOne
 	@JoinColumn(name="maBL")
-	private BinhLuan binhluan;
+	private BinhLuan binhLuan;
 }

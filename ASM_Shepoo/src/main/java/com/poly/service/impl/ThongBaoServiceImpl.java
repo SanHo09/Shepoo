@@ -3,11 +3,12 @@ package com.poly.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
 import com.poly.dao.ThongBaoDAO;
 import com.poly.model.ThongBao;
 import com.poly.service.ThongBaoService;
-
+@Service
 public class ThongBaoServiceImpl implements ThongBaoService {
 	@Autowired
 	ThongBaoDAO dao;

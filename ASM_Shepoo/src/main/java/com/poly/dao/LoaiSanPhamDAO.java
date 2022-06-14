@@ -12,12 +12,12 @@ import com.poly.model.SanPham;
 
 
 public interface LoaiSanPhamDAO extends JpaRepository<LoaiSanPham, Integer>{
-	@Query("SELECT lsp FROM LoaiSanPham lsp WHERE lsp.id = ?1")
+	@Query("SELECT lsp FROM LoaiSanPham lsp WHERE lsp.maLSP = ?1")
 	LoaiSanPham findLoaiSanPhamById(int id);
 	
 	@Query("SELECT lsp FROM LoaiSanPham lsp")
 	List<LoaiSanPham> findAllLoaiSanPham();
 	
-	@Query("SELECT lsp FROM LoaiSanPham lsp where lsp.name like %?1%")
+	@Query("SELECT lsp FROM LoaiSanPham lsp where lsp.tenLSP like %?1%")
 	Page<LoaiSanPham> findLoaiSanPhamByName(String keywords, Pageable pageable);
 }

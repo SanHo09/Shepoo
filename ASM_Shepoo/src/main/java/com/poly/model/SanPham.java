@@ -17,33 +17,33 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "SanPham")
+@Table(name = "sanpham")
 public class SanPham {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "MaSP")
+	@Column(name = "Masp")
 	private int maSP;
-	@Column(name = "TenSP")
+	@Column(name = "Tensp")
 	private String tenSP;
 	@Column(name = "Gia")
 	private double gia;
-	@Column(name = "SoLuong")
+	@Column(name = "Soluong")
 	private int soLuong;
-	@Column(name = "DaBan")
+	@Column(name = "Daban")
 	private int soLuongDaBan;
-	@Column(name = "MoTa")
+	@Column(name = "Mota")
 	private String moTa;
-	@Column(name = "NguoiBan")
-	private String tenNguoiBan;
-	@Column(name = "NoiBan")
+	@Column(name = "Manguoiban")
+	private int maNguoiBan;
+	@Column(name = "Noiban")
 	private String noiBan;
-	@Column(name = "MauSac")
+	@Column(name = "Mausac")
 	private String mauSac;
 	@Column(name = "Size")
 	private String size;
-	@Column(name = "XuatSu")
+	@Column(name = "Xuatsu")
 	private String xuatSu;
-	@Column(name = "ChatLieu")
+	@Column(name = "Chatlieu")
 	private String chatLieu;
 	@Column(name = "RATE")
 	private double rate;

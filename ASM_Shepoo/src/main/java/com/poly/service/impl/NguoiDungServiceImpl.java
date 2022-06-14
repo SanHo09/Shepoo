@@ -5,11 +5,12 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
 import com.poly.model.NguoiDung;
 import com.poly.service.NguoiDungService;
 import com.poly.dao.NguoiDungDAO;
-
+@Service
 public class NguoiDungServiceImpl implements NguoiDungService {
 	@Autowired
 	NguoiDungDAO dao;

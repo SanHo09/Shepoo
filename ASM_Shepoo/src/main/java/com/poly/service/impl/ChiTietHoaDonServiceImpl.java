@@ -3,22 +3,16 @@ package com.poly.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
 
 import com.poly.dao.ChiTietHoaDonDAO;
 import com.poly.model.ChiTietHoaDon;
 import com.poly.service.chiTietHoaDonService;
-
+@Service
 public class ChiTietHoaDonServiceImpl implements chiTietHoaDonService{
 	@Autowired
 	ChiTietHoaDonDAO dao;
 	
-
-	@Override
-	public Page<ChiTietHoaDon> findAllByProduct(int maSP, Pageable page) {
-		// TODO Auto-generated method stub
-		
-		return dao.findAllByProduct(maSP, page);
-	}
 
 	@Override
 	public Page<ChiTietHoaDon> findAllByMaHoaDon(int maHD, Pageable page) {

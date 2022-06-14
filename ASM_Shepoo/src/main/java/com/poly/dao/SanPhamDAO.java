@@ -11,12 +11,10 @@ import com.poly.model.SanPham;
 
 
 public interface SanPhamDAO extends JpaRepository<SanPham, Integer>{
-	@Query("SELECT sp FROM SanPham sp WHERE sp.id = ?1 and sp.active = true")
+	@Query("SELECT sp FROM SanPham sp WHERE sp.maSP = ?1 and sp.active = true")
 	SanPham findSanPhamById(int id);
 	
-	@Query("SELECT sp FROM SanPham sp")
-	List<SanPham> findAllSanPham();
 	
-	@Query("SELECT sp FROM SanPham sp where sp.name like %?1%")
+	@Query("SELECT sp FROM SanPham sp where sp.tenSP like %?1%")
 	Page<SanPham> findSanPhamByName(String keywords, Pageable pageable);
 }

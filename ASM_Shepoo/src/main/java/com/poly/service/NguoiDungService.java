@@ -12,7 +12,7 @@ import com.poly.model.ThongBao;
 
 public interface NguoiDungService {
 	Page<NguoiDung> findAll(Pageable page);
-	Page<NguoiDung> findAllByActive(Pageable page);
+	List<NguoiDung> findAllByActive();
 	Optional<NguoiDung> findById(Integer id);
 	NguoiDung findByUsername(String username);
 	NguoiDung findByUsernameAndPassword(String username,String password);

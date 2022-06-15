@@ -60,9 +60,9 @@
 				</div>
 				<!-- /.col-lg-12 -->
 			</div>
-			<div class="container-fluid">
+			<div class="container-fluid" >
 			<!-- Total stuffs -->
-				<div class="container">
+				<div class="container" >
 					<%@include file="../../../common/admin/management/updateProduct.jsp"%>
 				</div>
 			</div>

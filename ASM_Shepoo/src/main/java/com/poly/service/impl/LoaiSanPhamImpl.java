@@ -1,5 +1,7 @@
 package com.poly.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -30,12 +32,17 @@ public class LoaiSanPhamImpl implements LoaiSanPhamService{
 	}
 
 	@Override
-	public LoaiSanPham findLoaiSanPhamById(int id) {
-		return dao.findLoaiSanPhamById(id);
+	public LoaiSanPham findLoaiSanPhamById(int maLSP) {
+		return dao.findLoaiSanPhamById(maLSP);
 	}
 
 	@Override
 	public Page<LoaiSanPham> findLoaiSanPhamByName(String keywords, Pageable pageable) {
 		return dao.findLoaiSanPhamByName(keywords, pageable);
+	}
+
+	@Override
+	public List<LoaiSanPham> findByAll() {
+		return dao.findAll();
 	}
 }

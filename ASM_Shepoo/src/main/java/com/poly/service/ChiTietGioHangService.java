@@ -1,12 +1,14 @@
 package com.poly.service;
 
+import java.util.List;
+
 import com.poly.model.ChiTietGioHang;
 
 public interface ChiTietGioHangService {
-	public void findAll();
-	public void findAllByGioHang();
-	public ChiTietGioHang create();
-	public ChiTietGioHang update();
-	public ChiTietGioHang delete();
-	public Boolean existInGioHang();
+	public List<ChiTietGioHang> findAll();
+	public List<ChiTietGioHang> findAllByGioHang(int maGH);
+	public ChiTietGioHang create(ChiTietGioHang ctgh);
+	public ChiTietGioHang update(ChiTietGioHang ctgh);
+	public void delete(ChiTietGioHang ctgh);
+	
 }

@@ -1,14 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
-
+<form:form action="admin/updateProduct" modelAttribute="sanpham">
 <div class="input-group">
 	<select class="form-select" id="inputGroupSelect04"
 		aria-label="Example select with button addon">
-		<option selected>Loại sản phẩm</option>
-		<option value="1">One</option>
-		<option value="2">Two</option>
-		<option value="3">Three</option>
+		<c:forEach items="${loaiSanPham }" var="item" varStatus="loop">
+			<option values="maLSP">${item.tenLSP}</option>
+		</c:forEach>
 	</select>
 	<button class="btn btn-outline-secondary" type="button">Chọn</button>
 </div>
@@ -19,22 +17,19 @@
 	<span class="input-group-text" id="inputGroup-sizing-default">Tên
 		sản phẩm</span> <input type="text" class="form-control"
 		aria-label="Sizing example input"
-		aria-describedby="inputGroup-sizing-default">
+		aria-describedby="inputGroup-sizing-default" value="${sp.tenSP}"></div>
+<br>
+<div class="input-group mb-3">
+	<span class="input-group-text">Giá </span> <input type="text"
+		class="form-control" aria-label="Amount (to the nearest dollar)" value="${sp.gia}">
+	<span class="input-group-text" >.000đ</span>
 </div>
 
 <br>
 
 <div class="input-group mb-3">
 	<span class="input-group-text">Giá </span> <input type="text"
-		class="form-control" aria-label="Amount (to the nearest dollar)">
-	<span class="input-group-text">.000đ</span>
-</div>
-
-<br>
-
-<div class="input-group mb-3">
-	<span class="input-group-text">Giá </span> <input type="text"
-		class="form-control" aria-label="Amount (to the nearest dollar)">
+		class="form-control" aria-label="Amount (to the nearest dollar)" value="${sp.gia}">
 	<span class="input-group-text">.000đ</span>
 </div>
 
@@ -90,8 +85,9 @@
 
 
 					</div>
+					</form:form>
 					<br>
 					<br>
 					<button
-						class="btn btn-danger  d-none d-md-block pull-right ms-3 hidden-xs hidden-sm waves-effect waves-light text-white">Cập nhật sản phẩm</button>
+						class="btn btn-danger  d-none d-md-block pull-right ms-3 hidden-xs hidden-sm waves-effect waves-light text-white" formaction="admin/updateProduct">Cập nhật sản phẩm</button>
 				</div>

@@ -1,18 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-
 <div class="input-group">
 	<select class="form-select" id="inputGroupSelect04"
 		aria-label="Example select with button addon">
 		<option selected>Loại sản phẩm</option>
-		<option value="1">One</option>
-		<option value="2">Two</option>
-		<option value="3">Three</option>
+		<option value="1">${lsp.maLSP}</option>
 	</select>
 	<button class="btn btn-outline-secondary" type="button">Chọn</button>
 </div>
-
 <br>
 
 <div class="input-group mb-3">

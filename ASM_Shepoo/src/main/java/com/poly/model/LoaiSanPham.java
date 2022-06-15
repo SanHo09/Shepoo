@@ -22,9 +22,9 @@ import lombok.NoArgsConstructor;
 public class LoaiSanPham {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "MaLSP")
+	@Column(name = "Malsp")
 	private int maLSP;
-	@Column(name = "TenLSP")
+	@Column(name = "Tenlsp")
 	private String tenLSP;
 	@OneToMany(mappedBy = "loaiSanPham")
 	private List<SanPham> sanPhams;

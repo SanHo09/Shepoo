@@ -17,4 +17,7 @@ public interface SanPhamDAO extends JpaRepository<SanPham, Integer>{
 	
 	@Query("SELECT sp FROM SanPham sp where sp.tenSP like %?1%")
 	Page<SanPham> findSanPhamByName(String keywords, Pageable pageable);
+	
+	@Query("SELECT sp FROM SanPham sp WHERE sp.active = true")
+	Page<SanPham> findAllSanPham(Pageable pageable);
 }

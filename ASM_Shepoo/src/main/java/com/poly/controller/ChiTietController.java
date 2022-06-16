@@ -12,12 +12,13 @@ import com.poly.service.SanPhamService;
 @Controller
 public class ChiTietController {
 	@Autowired 
-	private SanPhamService sanPhamService;
+	SanPhamService sanPhamService;
+	
 	@GetMapping("/detail/{maSP}")
 	public String showIndex(@PathVariable("maSP") Integer maSP, Model model) {
 		SanPham sp = sanPhamService.findSanPhamById(maSP);
 		model.addAttribute("product", sp);
-		return "detail";
+		return "/product/detail";
 	}
 
 }

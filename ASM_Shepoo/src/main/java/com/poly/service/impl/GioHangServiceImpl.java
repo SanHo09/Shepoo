@@ -21,37 +21,39 @@ public class GioHangServiceImpl implements GioHangService{
 
 	@Override
 	public GioHang findAllByNguoiDung(int maND) {
-		return null;
+		return dao.findByMaND(maND);
 	}
 
 	@Override
-	public GioHang create() {
+	public GioHang create(GioHang gioHang) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.save(gioHang);
 	}
 
 	@Override
-	public GioHang update() {
+	public GioHang update(GioHang gioHang) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.save(gioHang);
 	}
 
 	@Override
-	public GioHang clear() {
+	public GioHang clear(GioHang gioHang) {
 		// TODO Auto-generated method stub
-		return null;
+		return dao.save(gioHang);
 	}
 
 	@Override
-	public void delete() {
-		// TODO Auto-generated method stub
+	public void delete(GioHang gioHang) {
+		dao.delete(gioHang);
 		
 	}
 
 	@Override
 	public Boolean checkExistsByUser() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return true;
 	}
+
+	
 
 }

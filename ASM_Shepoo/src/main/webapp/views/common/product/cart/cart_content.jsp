@@ -1,36 +1,38 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- foreach to load -->
-<tr>
-	<td>
-		<div class="row">
-			<div class="col-2">
-				<img src="/images/product/${i.value.image}" width="100px"
-					height="100px">
+<c:forEach items="${chiTietGioHang}" var="i" varStatus="loop">
+	<tr>
+		<td>
+			<div class="row">
+				<div class="col-2">
+					<img src="/images/product/${i.sanPham.anh1}" width="100px"
+						height="100px">
+				</div>
+				<div class="col-10">
+					<span style="margin-left: 10px">${i.sanPham.tenSP }</span>
+
+				</div>
 			</div>
-			<div class="col-10">
-				<span style="margin-left: 10px">${i.value.name }</span>
+		</td>
 
-			</div>
-		</div>
-	</td>
+		<td><fmt:formatNumber type="number">${i.sanPham.gia }</fmt:formatNumber>
+		</td>
+		<td>
+			<form action="/cart/update" method="GET">
+				<input type="number" onblur="this.form.submit()" min="0"
+					name="quantity" value="${i.soLuongMua }"
+					style="width: 80px; text-align: center;">
+			</form>
+		</td>
 
-	<td><fmt:formatNumber type="number">${i.value.price }</fmt:formatNumber>
-	</td>
-	<td>
-		<form action="/cart/update" method="GET">
-			<input type="number" onblur="this.form.submit()" min="0"
-				name="quantity" value="${i.value.quantity }"
-				style="width: 80px; text-align: center;">
-		</form>
-	</td>
+		<td style="color: #f94e30;"><fmt:formatNumber type="number">
+	          			 ${i.sanPham.gia * i.soLuongMua }
+	          		 </fmt:formatNumber></td>
 
-	<td style="color: #f94e30;"><fmt:formatNumber type="number">
-          			 ${i.value.price * i.value.quantity }
-          		 </fmt:formatNumber></td>
-
-	<td style="cursor: pointer;"><a href="/cart/remove/${i.value.id}">Xóa</a></td>
-</tr>
+		<td style="cursor: pointer;"><a href="/cart/remove/${i.maCTGH}">Xóa</a></td>
+	</tr>
+</c:forEach>
 <tr>
 	<td colspan="5"><a href="#" style="color: #f94e30;"><svg
 				xmlns="http://www.w3.org/2000/svg" width="16" height="16"

@@ -11,5 +11,8 @@ public interface GioHangDAO extends JpaRepository<GioHang, Integer> {
 	
 	@Query("SELECT g FROM GioHang g WHERE g.nguoiDung.maND =?1")
 	public GioHang findByMaND(int maNG);
+
+	@Query("DELETE ChiTietGioHang c WHERE c.gioHang.maGH =?1")
+	public void clearGioHang(int maGH);
 	
 }

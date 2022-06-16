@@ -47,12 +47,11 @@ public class SanPhamServiceImpl implements SanPhamService{
 
 	@Override
 	public Page<SanPham> findAll(Pageable page) {
-		return dao.findAll(page);
+		return dao.findAllSanPham(page);
 	}
 
 	@Override
 	public List<SanPham> findAlltoList() {
-		// TODO Auto-generated method stub
 		return dao.findAll();
 	}
 

@@ -42,7 +42,7 @@
 			<c:forEach items="${sanPhamPage.content}" var="i" varStatus="loop">
 				<div class="card col-sm-2 product">
 
-					<a href="#!detail/{{i.id}}" class=""> <img class="card-img-top"
+					<a href="/detail/${i.maSP}" class=""> <img class="card-img-top"
 						src="/images/product/${i.anh1}" alt="Card image cap">
 					</a>
 					<div class="card-body">

@@ -22,22 +22,21 @@
 		<div class="input-place">
 			<div class="inputGroup">
 				<input placeholder="Email/Số Điện Thoại/Tên Đăng Nhập"
-					name="txtUserName" ng-model="userName" type="text"
+					name="username" ng-model="userName" type="text"
 					class="form-control" aria-describedby="passwordHelpBlock" required>
 				<div class="form-text error">
-					<span id="chkUserName" ng-show="frmLogin.txtUserName.$invalid">Vui
-						lòng nhập tài khoản</span>
+					<span id="chkUserName" ng-show="frmLogin.txtUserName.$invalid"></span>
 				</div>
 			</div>
 			<div class="inputGroup">
-				<input placeholder="Mật Khẩu" name="txtPassword" type="password"
+				<input placeholder="Mật Khẩu" name="password" type="password"
 					ng-model="password" class="form-control"
 					aria-describedby="passwordHelpBlock" required>
 				<div class="form-text error">
-					<span ng-show="frmLogin.txtPassword.$invalid">Vui lòng nhập
-						mật khẩu</span>
+					<span ng-show="frmLogin.txtPassword.$invalid"></span>
 				</div>
 			</div>
+				<span style="color: red;margin-top: 10px;">${msg }</span>
 			<br>
 			<button class="btn-lg btn-block col-sm-12 sign-in" ng-click="login()">Đăng
 				Nhập</button>
@@ -63,7 +62,7 @@
 			</div>
 
 			<div class="signUp text-center">
-				<span>Bạn mới biết đến Shepoo? <a href="#!signUp">Đăng Ký</a></span>
+				<span>Bạn mới biết đến Shepoo? <a href="/user/signUp">Đăng Ký</a></span>
 			</div>
 		</div>
 		<!-- Modal -->

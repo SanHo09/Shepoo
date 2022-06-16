@@ -1,5 +1,7 @@
 package com.poly.dao;
 
+import java.util.List;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -15,5 +17,6 @@ public interface NguoiDungDAO  extends JpaRepository<NguoiDung, Integer> {
 	@Query("Update NguoiDung o set o.active=0 where o.maND=?1")
 	public NguoiDung deleteById(NguoiDung entity);
 	@Query("select o FROM NguoiDung o where o.active=1")
-	public Page<NguoiDung> findAllByActive(Pageable page);
+	public List<NguoiDung> findAllByActive();
+	
 }

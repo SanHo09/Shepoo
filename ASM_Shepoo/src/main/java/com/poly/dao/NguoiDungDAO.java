@@ -18,5 +18,7 @@ public interface NguoiDungDAO  extends JpaRepository<NguoiDung, Integer> {
 	public NguoiDung deleteById(NguoiDung entity);
 	@Query("select o FROM NguoiDung o where o.active=1")
 	public List<NguoiDung> findAllByActive();
+	@Query("Select o FROM NguoiDung o where o.email=?1")
+	public NguoiDung findByEmail(String email);
 	
 }

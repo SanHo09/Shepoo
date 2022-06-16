@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<form id="frm" class="bg-white login-form" name="frmLogin">
+<form id="frm" class="bg-white login-form" name="frmLogin" action="/user/signIn" modelAttribute="user" method="post">
 	<div class="container ">
 		<legend style="margin-top: 30px;">
 			Đăng Nhập
@@ -18,7 +18,7 @@
                                     <path d="M12 9h2V8h-2v1Z" />
                                   </svg>
 		</legend>
-
+	
 		<div class="input-place">
 			<div class="inputGroup">
 				<input placeholder="Email/Số Điện Thoại/Tên Đăng Nhập"
@@ -43,8 +43,8 @@
 			<small id="loginFm" style="color: #f94e30; display: none;">Sai
 				tài khoản hoặc mật khẩu</small>
 			<div class="forgot-password justify-content-around">
-				<a data-bs-toggle="modal" data-bs-target="#exampleModal">Quên
-					Mật Khẩu</a> <a style="margin-left: 125px;">Đăng Nhập bằng SMS</a> <br>
+				<a href="/user/sendmail">Quên mật khẩu</a>
+					<a style="margin-left: 125px;">Đăng Nhập bằng SMS</a> <br>
 				<div class="separator">Hoặc</div>
 			</div>
 			<br>
@@ -64,35 +64,7 @@
 			<div class="signUp text-center">
 				<span>Bạn mới biết đến Shepoo? <a href="/user/signUp">Đăng Ký</a></span>
 			</div>
+			<h6 style="color: black;margin-top: 10px;">${message }</h6>
 		</div>
-		<!-- Modal -->
-		<div class="modal fade" id="exampleModal" tabindex="-1"
-			aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<div class="input-group mb-3">
-							<input type="text" class="form-control"
-								placeholder="Nhập tài khoản" aria-label="Recipient's username"
-								aria-describedby="button-addon2">
-							<button class="btn btn-outline-secondary" type="button"
-								id="button-addon2">Button</button>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary"
-							data-bs-dismiss="modal">Đóng</button>
-						<button type="button" class="btn btn-primary">Xác nhận</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
 	</div>
 </form>

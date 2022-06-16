@@ -19,4 +19,5 @@ public interface NguoiDungService {
 	NguoiDung create(NguoiDung entity);
 	NguoiDung update(NguoiDung entity);
 	NguoiDung deleteById(NguoiDung entity);
+	NguoiDung findByEmail(String email);
 }

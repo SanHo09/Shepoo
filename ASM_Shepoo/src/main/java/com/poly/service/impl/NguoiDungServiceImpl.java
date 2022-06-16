@@ -65,6 +65,12 @@ public class NguoiDungServiceImpl implements NguoiDungService {
 		return dao.findAllByActive();
 	}
 
+	@Override
+	public NguoiDung findByEmail(String email) {
+		// TODO Auto-generated method stub
+		return dao.findByEmail(email);
+	}
+
 	
 	
 

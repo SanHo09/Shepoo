@@ -18,6 +18,10 @@ public class SanPhamServiceImpl implements SanPhamService{
 
 	@Override
 	public SanPham saveSanPham(SanPham sanPham) {
+		sanPham.setActive(true);
+		sanPham.setNoiBan("Noi Ban");
+		sanPham.setRate(5);
+		sanPham.setSoLuongDaBan(0);
 		return dao.save(sanPham);
 	}
 
@@ -29,8 +33,13 @@ public class SanPhamServiceImpl implements SanPhamService{
 	}
 
 	@Override
-	public SanPham updateSanPham(SanPham SanPham) {
-		return dao.save(SanPham);
+	public SanPham updateSanPham(SanPham sanPham) {
+		SanPham oldSP = dao.findSanPhamById(sanPham.getMaSP());
+		sanPham.setActive(true);
+		sanPham.setNoiBan("Noi Ban");
+		sanPham.setRate(5);
+		sanPham.setSoLuongDaBan(oldSP.getSoLuongDaBan());
+		return dao.save(sanPham);
 	}
 
 	@Override

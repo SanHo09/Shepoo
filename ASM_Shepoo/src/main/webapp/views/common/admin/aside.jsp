@@ -13,10 +13,10 @@
 						class="far fa-clock" aria-hidden="true"></i> <span
 						class="hide-menu">Thống kê</span>
 				</a></li>
-				<li class="sidebar-item"><a
+				<li class="sidebar-item"><a href="/admin/addProduct"
 					class="sidebar-link waves-effect waves-dark sidebar-link"
 					href="profile.html" aria-expanded="false"> <i
-						class="fa fa-user" aria-hidden="true"></i> <span class="hide-menu">Thêm
+						class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Thêm
 							sản phẩm</span>
 				</a></li>
 				<li class="sidebar-item"><a

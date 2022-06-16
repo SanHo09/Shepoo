@@ -8,7 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import com.poly.model.LoaiSanPham;
-import com.poly.model.SanPham;
 
 
 public interface LoaiSanPhamDAO extends JpaRepository<LoaiSanPham, Integer>{

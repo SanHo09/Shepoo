@@ -26,8 +26,7 @@
 					class="form-control" aria-describedby="passwordHelpBlock" form-fmt
 					required>
 				<div class="form-text error">
-					<span id="chkUserName" ng-show="frmLogin.txtUserName.$invalid">Vui
-						lòng nhập tài khoản có độ dài từ 6 ký tự</span>
+					<span id="chkUserName" ng-show="frmLogin.txtUserName.$invalid"></span>
 				</div>
 			</div>
 
@@ -36,8 +35,7 @@
 					type="text" class="form-control"
 					aria-describedby="passwordHelpBlock" form-fmt required>
 				<div class="form-text error">
-					<span id="chkUserName" ng-show="frmLogin.txtFullName.$invalid">Vui
-						lòng nhập họ tên đúng định dạng</span>
+					<span id="chkUserName" ng-show="frmLogin.txtFullName.$invalid"></span>
 				</div>
 			</div>
 
@@ -46,8 +44,7 @@
 					ng-model="password" class="form-control"
 					aria-describedby="passwordHelpBlock" form-fmt required>
 				<div class="form-text error">
-					<span ng-show="frmLogin.txtPassword.$invalid">Vui lòng nhập
-						mật khẩu có độ dài từ 6 ký tự</span>
+					<span ng-show="frmLogin.txtPassword.$invalid"></span>
 				</div>
 			</div>
 
@@ -56,11 +53,10 @@
 					type="Password" ng-model="confirmPassword" class="form-control"
 					aria-describedby="passwordHelpBlock" form-fmt required>
 				<div class="form-text error">
-					<span ng-show="frmLogin.txtConFirmPassword.$invalid">Vui
-						lòng nhập lại mật khẩu</span>
+					<span ng-show="frmLogin.txtConFirmPassword.$invalid"></span>
 				</div>
 			</div>
-
+			<span style="color: red;margin-top: 10px;">${msg }</span>
 			<button class="btn-lg btn-block col-sm-12 sign-in"
 				ng-click="signUp()">Đăng Ký</button>
 			<small id="loginFm" style="color: #f94e30; display: none;">Tài
@@ -68,7 +64,7 @@
 
 
 			<div class="signUp text-center">
-				<span>Đã có tài khoản <a href="#!signIn">Đăng Nhập</a></span>
+				<span>Đã có tài khoản <a href="/user/signIn">Đăng Nhập</a></span>
 			</div>
 		</div>
 		<!-- Modal -->

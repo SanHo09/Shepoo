@@ -5,7 +5,9 @@
 		<div class="white-box">
 			<div class="d-md-flex mb-3">
 				<h3 class="box-title mb-0">Danh Sách sản phẩm</h3>
-
+				<a href="/admin/addProduct"
+				target="_blank"
+				class="btn btn-danger  d-none d-md-block pull-right ms-3 hidden-xs hidden-sm waves-effect waves-light text-white">Thêm sản phẩm</a>
 			</div>
 			<div class="table-responsive">
 				<table class="table no-wrap">
@@ -28,7 +30,7 @@
 									<td class="txt-oflo">${i.soLuong}</td>
 									<td><span class="text-success">
 											<a href="/admin/updateProduct/${i.maSP}">Sửa</a>
-											<button type="submit">Xóa</button>
+											<button class="btn btn-primary   text-white" type="submit">Xóa</button>
 									</span></td>
 								</tr>
 		

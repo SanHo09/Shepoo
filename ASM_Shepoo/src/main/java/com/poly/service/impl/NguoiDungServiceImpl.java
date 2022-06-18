@@ -36,9 +36,17 @@ public class NguoiDungServiceImpl implements NguoiDungService {
 	}
 
 	@Override
-	public NguoiDung create(NguoiDung entity) {
-		// TODO Auto-generated method stub
-		return dao.save(entity);
+	public NguoiDung create(NguoiDung user) {
+		user.setActive(true);
+		user.setDiaChi("TP HCM");
+		user.setEmail("nguoidung@gmail.com");
+		user.setGioiTinh(false);
+		user.setImage(null);
+		user.setNgaySinh("2000-10-22");
+		user.setTenShop(null);
+		user.setVaiTro(false);
+		user.setSdt("0912345678");
+		return dao.save(user);
 	}
 
 	@Override

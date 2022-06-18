@@ -7,7 +7,7 @@
 		<nav class="sidebar-nav">
 			<ul id="sidebarnav">
 				<!-- User Profile-->
-				<li class="sidebar-item pt-2"><a
+				<li class="sidebar-item pt-2"><a href="/admin/dashboard"
 					class="sidebar-link waves-effect waves-dark sidebar-link"
 					href="dashboard.html" aria-expanded="false"> <i
 						class="far fa-clock" aria-hidden="true"></i> <span
@@ -19,18 +19,7 @@
 						class="fa fa-user" aria-hidden="true"></i><span class="hide-menu">Thêm
 							sản phẩm</span>
 				</a></li>
-				<li class="sidebar-item"><a
-					class="sidebar-link waves-effect waves-dark sidebar-link"
-					href="basic-table.html" aria-expanded="false"> <i
-						class="fa fa-table" aria-hidden="true"></i> <span
-						class="hide-menu">Sửa sản phẩm</span>
-				</a></li>
-				<li class="sidebar-item"><a
-					class="sidebar-link waves-effect waves-dark sidebar-link"
-					href="fontawesome.html" aria-expanded="false"> <i
-						class="fa fa-font" aria-hidden="true"></i> <span class="hide-menu">Cập
-							nhật sản phẩm</span>
-				</a></li>
+				
 				<li class="sidebar-item"><a
 					class="sidebar-link waves-effect waves-dark sidebar-link"
 					href="map-google.html" aria-expanded="false"> <i

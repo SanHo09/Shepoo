@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<form id="frm" class="bg-white login-form" name="frmLogin">
+<form id="frm" class="bg-white login-form" action="/user/signUp" method="post" name="frmLogin">
 	<div class="container ">
 		<legend style="margin-top: 10px;">
 			Đăng Ký
@@ -89,7 +89,7 @@
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary"
 							data-bs-dismiss="modal">Đóng</button>
-						<button type="button" class="btn btn-primary">Xác nhận</button>
+						<button type="submit" class="btn btn-primary">Xác nhận</button>
 					</div>
 				</div>
 			</div>

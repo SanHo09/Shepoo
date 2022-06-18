@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<form action="/addTocard/${product.maSP}">
+<form action="/cart/addToCard/${product.maSP}" method="POST">
 	<div class="row product-image"
 		style="height: 700px; background-color: white;">
 		<div class="col-sm-5">
@@ -112,7 +112,7 @@
 					<i class="fa fa-cart-plus"></i>Thêm vào giỏ hàng
 				</button>
 
-				<button formaction="/buynow/${product.maSP}" class="buy-now">Mua Ngay</button>
+				<button formaction="/cart/addToCard/${product.maSP}" class="buy-now">Mua Ngay</button>
 
 			</div>
 		</div>

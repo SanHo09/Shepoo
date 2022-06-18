@@ -49,9 +49,9 @@
 					</a></li>
 
 					<li class="nav-item" ng-if="user==''"><a class="nav-link"
-						aria-current="page" href="#!signUp"> Đăng Ký | </a></li>
+						aria-current="page" href="/user/signUp"> Đăng Ký | </a></li>
 					<li class="nav-item" ng-if="user==''"><a class="nav-link"
-						aria-current="page" href="#!signIn"> Đăng Nhập </a></li>
+						aria-current="page" href="/user/signIn"> Đăng Nhập </a></li>
 					<li class="nav-item" ng-if="user!=''"><a class="nav-link"
 						aria-current="page"> <svg xmlns="http://www.w3.org/2000/svg"
 								width="16" height="16" fill="currentColor"

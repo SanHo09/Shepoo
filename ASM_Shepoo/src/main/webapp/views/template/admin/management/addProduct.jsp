@@ -16,12 +16,11 @@
 <meta name="description"
 	content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
 <meta name="robots" content="noindex,nofollow">
-<title>Thống kê</title>
+<title>Thêm sản phấm</title>
 <link rel="canonical"
 	href="https://www.wrappixel.com/templates/ample-admin-lite/" />
 <!-- Favicon icon -->
-<link rel="icon" type="image/png" sizes="16x16"
-	href="/plugins/images/favicon.png">
+
 <!-- Custom CSS -->
 <link href="plugins/bower_components/chartist/dist/chartist.min.css"
 	rel="stylesheet">
@@ -52,7 +51,7 @@
 							<ol class="breadcrumb ms-auto">
 								<li><a href="#" class="fw-normal">Thêm sản phẩm</a></li>
 							</ol>
-							<a href="https://www.wrappixel.com/templates/ampleadmin/"
+							<a href="/product/index"
 								target="_blank"
 								class="btn btn-danger  d-none d-md-block pull-right ms-3 hidden-xs hidden-sm waves-effect waves-light text-white">Trang
 								chủ</a>

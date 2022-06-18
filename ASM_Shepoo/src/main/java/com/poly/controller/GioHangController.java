@@ -107,16 +107,18 @@ public class GioHangController {
 		return "redirect:/cart/cart";
 	}
 	
-	@PostMapping("/removeFromCard/{maCTGH}")
-	public String removeFromCard(Model model, @RequestParam("maCTGH") int maCTGH) {
+	@PostMapping("/remove/{maCTGH}")
+	public String removeFromCard(Model model, @PathVariable("maCTGH") int maCTGH) {
+		System.out.println("Xoa CTGH");
 		ChiTietGioHang ctgh = chiTietGioHangService.findByID(maCTGH).get(); 
 		chiTietGioHangService.delete(ctgh);
 		return "redirect:/cart/cart";
 	}
 	
-	@PostMapping("/setQuantiy/{quantity}")
-	public String setQuantity(Model model, @RequestParam("maCTGH") int maCTGH, @RequestParam("quantity") int quantity) {
+	@PostMapping("/update/{maCTGH}")
+	public String setQuantity(Model model, @PathVariable("maCTGH") int maCTGH, @RequestParam("quantity") int quantity) {
 		ChiTietGioHang ctgh = chiTietGioHangService.findByID(maCTGH).get(); 
+		System.out.println(quantity);
 		if(quantity<=0) {
 			chiTietGioHangService.delete(ctgh);
 		} else {
@@ -128,8 +130,8 @@ public class GioHangController {
 	
 	@PostMapping("/thanhToan")
 	public String thanhToan() {
-		int maNDSession = 1;
-		GioHang gioHang = gioHangService.findAllByNguoiDung(maNDSession);
+		NguoiDung nguoiDung = session.get("user");
+		GioHang gioHang = gioHangService.findAllByNguoiDung(nguoiDung.getMaND());
 		List<ChiTietGioHang> ctgh = chiTietGioHangService.findAllByGioHang(gioHang.getMaGH());
 		// xet so luong lai cho san pham
 		for(ChiTietGioHang i : ctgh) {
@@ -139,8 +141,13 @@ public class GioHangController {
 			sanPham.setSoLuong(SO_LUONG_CU - SO_LUONG_MUA);
 		}
 		gioHangService.clear(gioHang);
-		
-		return "redirect:/product/index";
+		System.out.println("Da Clear");
+		return "redirect:/cart/cart";
+	}
+	
+	@PostMapping("/cart/update")
+	public String updateQuantity() {
+		return "";
 	}
 	
 	

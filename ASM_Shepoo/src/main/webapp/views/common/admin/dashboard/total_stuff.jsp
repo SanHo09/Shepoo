@@ -40,7 +40,7 @@
 							style="display: inline-block; width: 67px; height: 30px; vertical-align: top;"></canvas>
 					</div>
 				</li>
-				<li class="ms-auto"><span class="counter text-info">911</span>
+				<li class="ms-auto"><span class="counter text-info">153.000đ</span>
 				</li>
 			</ul>
 		</div>

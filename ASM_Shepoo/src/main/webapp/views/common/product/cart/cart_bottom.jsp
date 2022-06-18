@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <div class="container position-sticky" id="cartBottom">
-	<form>
+	<form method="POST">
 		<table class="table">
 			<tr>
 				<td><a href="#" class="shepooVoucher"
@@ -24,7 +24,7 @@
 						phẩm):<span style="color: #f94e30;"><fmt:formatNumber
 								type="number"> ${total}</fmt:formatNumber></span>
 				</span>
-					<button id="btnPay">Mua Hàng</button></td>
+					<button id="btnPay" formaction="/cart/thanhToan">Mua Hàng</button></td>
 			</tr>
 		</table>
 	</form>

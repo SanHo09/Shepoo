@@ -1,5 +1,7 @@
 package com.poly.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -17,33 +20,33 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "sanpham")
+@Table(name = "SanPham")
 public class SanPham {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "Masp")
+	@Column(name = "MaSP")
 	private int maSP;
-	@Column(name = "Tensp")
+	@Column(name = "TenSP")
 	private String tenSP;
 	@Column(name = "Gia")
 	private double gia;
-	@Column(name = "Soluong")
+	@Column(name = "SoLuong")
 	private int soLuong;
-	@Column(name = "Daban")
+	@Column(name = "DaBan")
 	private int soLuongDaBan;
-	@Column(name = "Mota")
+	@Column(name = "MoTa")
 	private String moTa;
-	@Column(name = "Manguoiban")
+	@Column(name = "MaNguoiBan")
 	private int maNguoiBan;
-	@Column(name = "Noiban")
+	@Column(name = "NoiBan")
 	private String noiBan;
-	@Column(name = "Mausac")
+	@Column(name = "MauSac")
 	private String mauSac;
 	@Column(name = "Size")
 	private String size;
-	@Column(name = "Xuatsu")
+	@Column(name = "xuatsu")
 	private String xuatSu;
-	@Column(name = "Chatlieu")
+	@Column(name = "ChatLieu")
 	private String chatLieu;
 	@Column(name = "RATE")
 	private double rate;
@@ -59,6 +62,10 @@ public class SanPham {
 	private String anh5;
 	@Column(name = "Active")
 	private boolean active;
+	
+	@OneToMany(mappedBy = "sanPham")
+	List<BinhLuan> binhLuans;
+	
 	@ManyToOne
 	@JoinColumn(name = "MaLSP")
 	private LoaiSanPham loaiSanPham;

@@ -64,4 +64,10 @@ public class SanPhamServiceImpl implements SanPhamService{
 		return dao.findAll();
 	}
 
+	@Override
+	public Page<SanPham> findSanPhamByLSP(int maLSP, Pageable pageable) {
+		// TODO Auto-generated method stub
+		return dao.findAllSanPhamByLSP(maLSP, pageable);
+	}
+
 }

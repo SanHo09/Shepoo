@@ -2,6 +2,7 @@ package com.poly.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,9 +23,10 @@ import lombok.NoArgsConstructor;
 public class Anh implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID_Anh")
 	private int id;
-	
+
 	@ManyToOne
-	@JoinColumn(name="maBL")
+	@JoinColumn(name="MaBinhLuan")
 	private BinhLuan binhLuan;
 }

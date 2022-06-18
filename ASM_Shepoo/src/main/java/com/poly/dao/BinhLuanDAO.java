@@ -20,4 +20,7 @@ public interface BinhLuanDAO extends JpaRepository<BinhLuan, Integer>{
 	
 	@Query("DELETE BinhLuan p WHERE p.maBL=?1")
 	Void DeleteByID(Integer maBL);
+
+	@Query("SELECT count(p) FROM BinhLuan p WHERE p.sanPham.maSP=?1")
+	Integer countBinhLuanByMaSP(Integer maSP);
 }

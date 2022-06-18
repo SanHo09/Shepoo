@@ -67,7 +67,7 @@
 				<span>Đã có tài khoản <a href="/user/signIn">Đăng Nhập</a></span>
 			</div>
 		</div>
-		<!-- Modal -->
+		<!-- Modal -->	
 		<div class="modal fade" id="exampleModal" tabindex="-1"
 			aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog">

@@ -28,21 +28,20 @@ import lombok.NoArgsConstructor;
 public class BinhLuan implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "MaBinhLuan")
 	private int maBL;
-	
 	private String noiDung;
-	
 	private int danhGia;
 	
 	@Temporal(TemporalType.DATE)
 	@Column(name = "NgayBinhLuan")
 	private Date ngayBL = new Date();
-	
+
 	@ManyToOne
-	@JoinColumn(name="maSP")
+	@JoinColumn(name="MaSanPham")
 	private SanPham sanPham;
 	
 	@ManyToOne
-	@JoinColumn(name="maND")
+	@JoinColumn(name="maNguoiDung")
 	private NguoiDung nguoiDung;
 }

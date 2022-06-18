@@ -9,20 +9,20 @@
                                                 <path
 						fill-rule="evenodd"
 						d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
-                                            </svg> <a href="#">Tất cả danh
+                                            </svg> <a href="/product/category/category">Tất cả danh
 					mục</a>
 				<hr width="200px">
 
 		</strong></li>
+		<c:forEach items="${loaiSanPhamList}" var="item" varStatus="loop">
+			<li><a href="/product/category/classify/${item.maLSP}">${item.tenLSP}</a></li>
+		</c:forEach>
+		
 
-		<li><a ng-click="filterByType('clothes')">Thời trang</a></li>
-		<li><a ng-click="filterByType('shoes')">Giày dép</a></li>
-		<li><a ng-click="filterByType('vehicle')">Xe cộ</a></li>
-		<li><a ng-click="filterByType('accessory')">Phụ kiện</a></li>
 
 	</ul>
 
-	<ul class="category" style="margin-top: 30px;">
+	<!-- <ul class="category" style="margin-top: 30px;">
 		<li><strong style="font-size: 17px;"> <svg
 					xmlns="http://www.w3.org/2000/svg" width="16" height="16"
 					fill="currentColor" class="bi bi-filter" viewBox="0 0 14 14  ">
@@ -40,7 +40,7 @@
 		<li>
 			<hr width="200px">
 		</li>
-	</ul>
+	</ul> -->
 	<ul>
 		<form>
 			Tìm Kiếm<br> <br> <input type="text"

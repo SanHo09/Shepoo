@@ -54,42 +54,42 @@
 			</div>
 
 			<nav class="nav justify-content-center topCategory" id="topCategory">
-				<a class="nav-link" href="/product/categories/shoes">
+				<a class="nav-link" href="/product/category/category">
 					<div class="card text-center align-items-center">
 						<img src="/images/classify/mask.jpg" width="60px" height="60px">
 						Bảo vệ sức khỏe
 					</div>
-				</a> <a class="nav-link" href="/product/categories/shoes">
+				</a> <a class="nav-link" href="/product/category/category">
 					<div class="card text-center align-items-center">
 						<img src="/images/classify/freeship.png" width="60px"
 							height="60px"> FREESHIP lên đến 100k
 					</div>
-				</a> <a class="nav-link" href="/product/categories/shoes">
+				</a> <a class="nav-link" href="/product/category/category">
 					<div class="card text-center align-items-center">
 						<img src="/images/classify/promotion.jpg" width="60px"
 							height="60px"> Khuyến mãi lên đến 50%
 					</div>
-				</a> <a class="nav-link" href="/product/categories/shoes">
+				</a> <a class="nav-link" href="/product/category/category">
 					<div class="card text-center align-items-center">
 						<img src="/images/classify/international.png" width="60px"
 							height="60px"> Hàng quốc tế
 					</div>
-				</a> <a class="nav-link" href="/product/categories/shoes">
+				</a> <a class="nav-link" href="/product/category/category">
 					<div class="card text-center align-items-center">
 						<img src="/images/classify/smartPhone.png" width="60px"
 							height="60px"> Nạp thẻ điện thoại
 					</div>
-				</a> <a class="nav-link" href="/product/categories/shoes">
+				</a> <a class="nav-link" href="/product/category/category">
 					<div class="card text-center align-items-center">
 						<img src="/images/classify/voucher.jpg" 60px" height="60px">
 						Tặng voucher mua hàng
 					</div>
-				</a> <a class="nav-link" href="/product/categories/shoes">
+				</a> <a class="nav-link" href="/product/category/category">
 					<div class="card text-center align-items-center">
 						<img src="/images/classify/computer.png" width="60px"
 							height="60px"> Siêu thị điện tử
 					</div>
-				</a> <a class="nav-link" href="/product/categories/shoes">
+				</a> <a class="nav-link" href="/product/category/category">
 					<div class="card text-center align-items-center">
 						<img src="/images/classify/food.png" width="60px" height="60px">
 						Sheepo Food
@@ -109,73 +109,73 @@
 	<span class="category-title"> DANH MỤC </span> <br>
 	<div class="row justify-content-center">
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/clothes.png" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Áo Nam
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/shoes.jpg" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Giày Nam
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/iphone.jpg" height="64px" alt="" srcset=""
 				style="margin: 10px;"> Điện thoại
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/watch.jpg" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Đồng hồ
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/manHinh.jpg" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Linh kiện máy tính
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/laptop.jpg" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Laptop/PC
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/mayAnh.jpg" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Máy ảnh
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/xeMay.jpg" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Các loại xe
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/Bong.jpg" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Thể thao
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/toys.jpg" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Đồ Chơi
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/bed.jpg" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Giường
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/bepga.png" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Bếp gas
 			</a>
@@ -185,73 +185,73 @@
 
 	<div class="row justify-content-center">
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/cothesFemale.jpg" width="64px" height="64px"
 				alt="" srcset="" style="margin: 10px;"> Áo Nữ
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/myPham.jpg" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Mỹ Phẩm
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/son.jpg" height="64px" alt="" srcset=""
 				style="margin: 10px;"> Son
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/doDungHocTap.jpg" width="64px" height="64px"
 				alt="" srcset="" style="margin: 10px;"> Đồ dùng học tập
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/Thuoc.jpg" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Sức khỏe
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/sach.jpg" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Sách
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/viNu.jpg" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Ví, cặp sách
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/noi.jpg" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Đồ nội chợ
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/figure.jpg" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Mô hình
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/gaming.png" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Tai nghe
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/tayCam.jpg" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Gaming
 			</a>
 		</div>
 		<div class="card col-sm-1 text-center">
-			<a href="/product/categories/shoes"> <img
+			<a href="/product/category/category"> <img
 				src="/images/classify/xeDap.jpg" width="64px" height="64px" alt=""
 				srcset="" style="margin: 10px;"> Xe Đạp
 			</a>

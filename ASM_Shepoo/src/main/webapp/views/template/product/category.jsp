@@ -64,21 +64,23 @@
 							</div>
 							<!--product List-->
 							<div class="row">
-								<div class="card col-sm-2 product"
-									ng-repeat="i in productList |orderBy:order| filter: {type : typeProp, brand : brandProp, name : nameProp }">
-									<a href="#!detail/{{i.id}}" class=""> <img
-										class="card-img-top" src="/images/product/{{i.img}}"
-										alt="Card image cap">
-									</a>
-									<div class="card-body">
-										<p class="card-text">{{i.name}}</p>
-										<span class="price">{{i.price | currency:'':3}}đ</span> <span
-											class="number">đã bán: {{i.sold/1000}}K</span>
-
+								<c:forEach items="${sanPhamPage.content}" var="i" varStatus="loop">
+									<div class="card col-sm-2 product">
+					
+										<a href="/detail/${i.maSP}" class=""> <img class="card-img-top"
+											src="/images/product/${i.anh1}" alt="Card image cap">
+										</a>
+										<div class="card-body">
+					
+											<p class="card-text">${i.tenSP}</p>
+											<span class="price">${i.gia} đ</span> <span
+												class="number">đã bán: ${i.soLuongDaBan}</span>
+					
+										</div>
 									</div>
-								</div>
-
+								</c:forEach>
 							</div>
+							
 							<!-- paging -->
 							<div class="row justify-content-center">
 							    <nav aria-label="Page navigation example">

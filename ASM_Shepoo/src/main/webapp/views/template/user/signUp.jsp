@@ -22,7 +22,7 @@
 
 <body ng-app="myApp">
     <!-- navbar -->
-    <%@include file="../../common/user/navbar.jsp" %>
+    <%@include file="../../common/user/navbar_signUp.jsp" %>
     <div class="container-fluid" style="background-color: #f94e30; height: 620px;">
         <div class="row content">
             <!-- banner -->

@@ -63,7 +63,4 @@ public class NguoiDungServiceImpl implements NguoiDungService {
 		// TODO Auto-generated method stub
 		return dao.findAllByActive(page);
 	}
-
-	
-
 }

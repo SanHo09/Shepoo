@@ -45,4 +45,14 @@ public class BinhLuanServicelmpl implements BinhLuanService{
 		dao.deleteById(maBL);
 	}
 
+	@Override
+	public List<BinhLuan> findAllByMaSP(Integer maSP) {
+		return dao.findAllByProduct(maSP);
+	}
+
+	@Override
+	public Integer countBinhLuanByMaSP(Integer maSP) {
+		return dao.countBinhLuanByMaSP(maSP);
+	}
+
 }

@@ -1,5 +1,6 @@
 package com.poly.service.impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,8 +60,14 @@ public class NguoiDungServiceImpl implements NguoiDungService {
 	}
 
 	@Override
-	public Page<NguoiDung> findAllByActive(Pageable page) {
+	public List<NguoiDung> findAllByActive() {
 		// TODO Auto-generated method stub
-		return dao.findAllByActive(page);
+		return dao.findAllByActive();
+	}
+
+	@Override
+	public NguoiDung findByEmail(String email) {
+		// TODO Auto-generated method stub
+		return dao.findByEmail(email);
 	}
 }

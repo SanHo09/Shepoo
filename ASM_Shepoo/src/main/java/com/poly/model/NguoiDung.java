@@ -27,14 +27,14 @@ public class NguoiDung {
 	boolean gioiTinh;
 	String sdt;
 	String password;
-	Date ngaySinh;
+	String ngaySinh;
 	String diaChi;
 	boolean vaiTro;
 	String tenShop;
 	String tenNguoiDung;
 	String email;
 	String image;
-	String active;
+	boolean active;
 	@OneToMany(mappedBy = "nguoidung")
 	List<ThongBao> thongbao;
 }

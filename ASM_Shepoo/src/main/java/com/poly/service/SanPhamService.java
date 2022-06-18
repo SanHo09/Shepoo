@@ -18,7 +18,7 @@ public interface SanPhamService {
 	
 	SanPham updateSanPham(SanPham sp);
 	
-	SanPham findSanPhamById(int id);
+	SanPham findSanPhamById(int maSP);
 	
 	Page<SanPham> findSanPhamByName(String keywords, Pageable pageable);
 }

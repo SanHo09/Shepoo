@@ -1,10 +1,18 @@
+
 # Shepoo 
 A clone of Shopee XD
+
+![image](https://user-images.githubusercontent.com/78090778/218510197-7abb22ff-52fa-41cc-a2c7-52b637e6ce87.png)
+
+
 # Introduction
-In this section, provide a detailed overview of the project. What is the project about? What problem does it solve? What are the features and benefits of the project?
+This is an E-commerce base on a platform called Shopee
+This App focus on user-friendly interface, a wide range of products, and focus on customer satisfaction
 
 # Getting Started
-Here, provide instructions on how to set up the project for development on a local machine. Explain the prerequisites for installing and running the project, and provide step-by-step instructions for setting up the environment.
+- Front-end: Bootstrap, JSP(Jakarta Server Pages)
+- Back-end: Java 8, Springboot
+- Database: MS SQL 2014
 
 # Usage
-Sử dụng bootstrap, springboot, MS SQL2014
+This App has the same basic functions as the original Shopee XD

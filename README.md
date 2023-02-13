@@ -10,7 +10,7 @@ This is an E-commerce base on a platform called Shopee
 This App focus on user-friendly interface, a wide range of products, and focus on customer satisfaction
 
 # Getting Started
-- Front-end: Bootstrap, JSP(Jakarta Server Pages)
+- Front-end: Bootstrap, HTML/CSS/Javascript, JSP(Jakarta Server Pages)
 - Back-end: Java 8, Springboot
 - Database: MS SQL 2014
 

